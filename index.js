@@ -13,8 +13,6 @@ $(function() {
         }
     })
     
-
-    
     $("input").keyup(function() {
         var str = $("#input").val().toLowerCase()
         var filterArray = characters.filter(function(character){
@@ -34,11 +32,17 @@ $(function() {
             </div>
             `)  
             
-        
-            
         })
     }
+
+    $("#randomArray").click(function() {
+        var shuffledCharacters = _.shuffle(characters)
+        displayList(shuffledCharacters)
+      })
+
+    
 })
+
 
 
 
